@@ -1,0 +1,23 @@
+/* Global Variables */
+:root {}
+
+/* Super-basic reset */
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100dvw;
+    height: 100dvh;
+}
+
+li {
+    display: flex;
+}
+
+img {
+    width: 16px;
+    height: auto;
+}
