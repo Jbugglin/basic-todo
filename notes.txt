@@ -1,0 +1,8 @@
+Localstorage:
+    -getItem : localStorage.getItem(<key>) - fetch from localStorage
+
+    -setItem : localStorage.setItem(key, value) - insert or set item into localStorage
+
+    -removeItem : localStorage.removeItem(key) - delete item or unset item from localStorage
+
+    -clear : localStorage.clear() - removes all the stored key value pairs. 
