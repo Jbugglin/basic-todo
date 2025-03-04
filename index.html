@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Very basic todo list">
     
     <link rel="stylesheet" href="style.css">
-    <title>Basic To-do</title>
+    <title>To-do</title>
 </head>
 <body>
-    <main>
+    <header>
+        <h1>Todo List</h1>
+    </header>
+
+    <main id="main-container">
         <div class="container">
-            <div class="header">
-                <h1>My todo list</h1>
+            <div class="input-section">
+                <input type="text" name="userInput" id="userInput" maxlength="32">
+
+                <button class="btn" id="submit-btn" onclick="addNoteToList()">
+                    <i class="fa-regular fa-square-plus"></i>
+                </button>
+
+                <button class="btn" id="clear-btn" onclick="clearInput()">
+                    <i class="fa-regular fa-square-minus"></i>
+                </button>
             </div>
 
-            <div class="todo-body">
-                <input type="text" id="todoText" class="todo-input" placeholder="Add items...">
-                <button onclick="AddListItem()"> + </button>
-            </div>
-
-            <div class="todo-list-container">
-                <ul id="list-items" class="list-items"></ul>
+            <div class="note-section">
+                <ul id="note-container"></ul>
             </div>
         </div>
     </main>
 
 
+    <footer>
+        <span>Coded by: Jordan Bugglin</span>
+    </footer>
     <script src="./noteAction.js"></script>
     <script src="https://kit.fontawesome.com/1e81cf774a.js" crossorigin="anonymous"></script>
 </body>

@@ -6,3 +6,15 @@ Localstorage:
     -removeItem : localStorage.removeItem(key) - delete item or unset item from localStorage
 
     -clear : localStorage.clear() - removes all the stored key value pairs. 
+
+Add Button to add new ul note container 
+    Create a h1 element with the list name 
+    Delete option
+
+Note structure:
+    basic note input
+    Add button 
+
+    Added note below input field 
+    Edit/Delete on same line as note 
+    

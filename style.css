@@ -13,18 +13,45 @@ html, body {
     height: 100dvh;
 }
 
-button {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 1px solid black;
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-li {
+header, main, footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+}
+
+.input-section {
     display: flex;
 }
 
-img {
-    width: 16px;
-    height: auto;
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem;
+    margin: 0rem 0.125rem 0rem 0.125rem;
+}
+
+input {
+    padding: 0.125rem;
+    margin: 0rem 0.125rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.875rem;
 }
