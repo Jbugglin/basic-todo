@@ -1,5 +1,7 @@
 /* Global Variables */
-:root {}
+:root {
+    --li-bg: rgba(223, 223, 254, 0.373);
+}
 
 /* Super-basic reset */
 *, *::after, *::before {
@@ -11,47 +13,4 @@
 html, body {
     width: 100dvw;
     height: 100dvh;
-}
-
-body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-header, main, footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header {
-    position: absolute;
-    top: 0;
-}
-
-.input-section {
-    display: flex;
-}
-
-.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.25rem;
-    margin: 0rem 0.125rem 0rem 0.125rem;
-}
-
-input {
-    padding: 0.125rem;
-    margin: 0rem 0.125rem;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    font-size: 0.875rem;
 }

@@ -14,23 +14,14 @@
     </header>
 
     <main id="main-container">
-        <div class="container">
-            <div class="input-section">
-                <input type="text" name="userInput" id="userInput" maxlength="32">
-
-                <button class="btn" id="submit-btn" onclick="addNoteToList()">
-                    <i class="fa-regular fa-square-plus"></i>
-                </button>
-
-                <button class="btn" id="clear-btn" onclick="clearInput()">
-                    <i class="fa-regular fa-square-minus"></i>
-                </button>
-            </div>
-
-            <div class="note-section">
-                <ul id="note-container"></ul>
-            </div>
-        </div>
+        <form id="add-to-todo-container">
+            <label for="todo-item">Add a note:</label>
+            <input type="text" name="todo-item" id="todo-item">
+            <button type="submit">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+        </form>
+        <ol id="todo-list"></ol>
     </main>
 
 

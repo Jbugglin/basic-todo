@@ -1,26 +1,40 @@
 // As basic as can be...
 // Create | Read | Update | Delete
 
-// Adds input li to ul on click
-function addNoteToList(){
-    //Get the ul container
-    let ul = document.getElementById('note-container');
-    //Get the user input value
-    let userInputValue = document.getElementById('userInput').value;
-    //Create li for the note
+//Get form, item and list
+let addToList = document.querySelector('#add-to-todo-container');
+let todoItem = document.querySelector('#todo-item');
+let todoList = document.querySelector('#todo-list');
+let deleteBtn = document.getElementById('deleteBtn');
+
+//Adds our todo item to our list and savesto local storage
+addToList.addEventListener('submit', function (e) {
+    //Don't submit form...
+    e.preventDefault();
+
+    //Ignore if item is empty...
+    if (todoItem.value.length < 1) return;
+
+    //Add to todo list
     let li = document.createElement('li');
-    //Create the edit and delete buttons
-    createEditBtn();
-    createDeleteBtn();
-    //Assign the user input to the li element
-    li.innerHTML = userInputValue;
-    //Append the li element to the ul
-    ul.appendChild(li);
+    let deleteBtn = document.createElement('button');
+    deleteBtn.id = 'deleteBtn';
+    deleteBtn.innerHTML = 'delete';
+    li.innerHTML = todoItem.value;
+    li.appendChild(deleteBtn);
+    todoList.appendChild(li);
+
+    //Clear input...
+    todoItem.value = '';
+
+    //Save list to localStorage...
+    localStorage.setItem('todoItems', todoList.innerHTML);
+}, false);
+
+//Check for saved todo list items...
+let saved = localStorage.getItem('todoItems');
+
+//Update if there are saved items...
+if(saved) {
+    todoList.innerHTML = saved;
 }
-
-function createEditBtn (){}
-
-function createDeleteBtn(){}
-
-// Deletes input on click
-function clearInput(){}
