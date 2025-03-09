@@ -17,3 +17,19 @@ header, main, footer {
     justify-content: center;
     align-items: center;
 }
+
+ul {
+    width: 100%;
+    max-width: 350px;
+}
+
+li {
+    list-style-type: none;
+    padding: 0.25rem 1rem;
+    margin: 0.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+}
