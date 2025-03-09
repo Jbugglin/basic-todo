@@ -11,24 +11,22 @@
 <body>
     <header>
         <h1>Todo List</h1>
+        <h2>Very Basic</h2>
     </header>
 
-    <main id="main-container">
-        <form id="add-to-todo-container">
-            <label for="todo-item">Add a note:</label>
-            <input type="text" name="todo-item" id="todo-item">
-            <button type="submit">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-            </button>
-        </form>
-        <ol id="todo-list"></ol>
+    <main>
+        <!--Need text input and submit button-->
+        <div id="user-input-container">
+            <input type="text" name="user-input" id="user-input">
+            <button id="subBtn" onclick="submitNote()">Add</button>
+        </div>
+        <ol id="list-container"></ol>
     </main>
 
-
     <footer>
-        <span>Coded by: Jordan Bugglin</span>
+        <span>Coded by: <a href="https://github.com/Jbugglin/basic-todo">Jordan Bugglin</a></span>
     </footer>
+
     <script src="./noteAction.js"></script>
-    <script src="https://kit.fontawesome.com/1e81cf774a.js" crossorigin="anonymous"></script>
 </body>
 </html>

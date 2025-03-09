@@ -1,40 +1,34 @@
-// As basic as can be...
-// Create | Read | Update | Delete
+//Create | Read | Update | Delete
 
-//Get form, item and list
-let addToList = document.querySelector('#add-to-todo-container');
-let todoItem = document.querySelector('#todo-item');
-let todoList = document.querySelector('#todo-list');
-let deleteBtn = document.getElementById('deleteBtn');
-
-//Adds our todo item to our list and savesto local storage
-addToList.addEventListener('submit', function (e) {
-    //Don't submit form...
-    e.preventDefault();
-
-    //Ignore if item is empty...
-    if (todoItem.value.length < 1) return;
-
-    //Add to todo list
-    let li = document.createElement('li');
-    let deleteBtn = document.createElement('button');
-    deleteBtn.id = 'deleteBtn';
-    deleteBtn.innerHTML = 'delete';
-    li.innerHTML = todoItem.value;
-    li.appendChild(deleteBtn);
-    todoList.appendChild(li);
-
-    //Clear input...
-    todoItem.value = '';
-
-    //Save list to localStorage...
-    localStorage.setItem('todoItems', todoList.innerHTML);
-}, false);
-
-//Check for saved todo list items...
-let saved = localStorage.getItem('todoItems');
-
-//Update if there are saved items...
-if(saved) {
-    todoList.innerHTML = saved;
+//Create
+function submitNote() {
+    let task = document.getElementById('user-input').value;
+    if (task != ""){
+        //Filled out input - add to li element
+        addNotetoLi(task);
+        //This clears out the input area so multiple button clicks aren't possible.
+        document.getElementById('user-input').value = "";
+    } else {
+        alert('Please enter in a note!');
+        //empty input error
+    }
 }
+
+//Read
+//Takes our task, creates text node and appends it to a li element then appends that li element to the ol list. 
+function addNotetoLi(task) {
+    //Get our list (ol)
+    let oList = document.getElementById('list-container');
+    //Create our li
+    let li = document.createElement('li');
+    //Append our text to an li element
+    li.appendChild(document.createTextNode(task));
+    //Append our li element to the list
+    oList.appendChild(li);
+}
+
+//Update -- Need to figure out how to edit a li element
+
+//Delete -- Need to figure out how to delete a li element
+
+//Bonus: utilize localStorage to save...
